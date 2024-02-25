@@ -1,4 +1,5 @@
-.bmp
+*.bmp
+dreieck
 
 # Prerequisites
 *.d
@@ -32,3 +33,6 @@
 *.exe
 *.out
 *.app
+
+dreieck
+compile_commands.json
