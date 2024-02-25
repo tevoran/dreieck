@@ -32,13 +32,13 @@ void drei::Bitmap::write(std::string file)
     m_file.write((const char*)&header, sizeof(Header));
 
     //write pixel data
-    for(uint64_t iy = 0; iy < m_res_y; iy++)
+    for(uint64_t iy = m_res_y; iy > 0; iy--)
     {
         for(uint64_t ix = 0; ix < m_res_x; ix++)
         {
-            m_file << m_pixels[ix + m_res_y * iy].b;
-            m_file << m_pixels[ix + m_res_y * iy].g;
-            m_file << m_pixels[ix + m_res_y * iy].r;
+            m_file << m_pixels[ix + m_res_x * iy].b;
+            m_file << m_pixels[ix + m_res_x * iy].g;
+            m_file << m_pixels[ix + m_res_x * iy].r;
         }
     }
 

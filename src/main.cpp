@@ -9,7 +9,20 @@ int main(int argc, char* argv[])
         uint64_t res_x = std::stoi(argv[1]);
         uint64_t res_y = std::stoi(argv[2]);
         drei::Bitmap bitmap(res_x, res_y);
+
+        drei::Pixel pixel;
+        pixel.r = 255;
+        pixel.g = 0;
+        pixel.b = 255;
+
+        for(uint64_t i = 0; i < res_y-100; i++)
+        {
+            bitmap.put_pixel(i,i,pixel);
+        }
+
         bitmap.write(argv[3]);
+
+
     }
     else
     {
