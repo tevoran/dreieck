@@ -36,5 +36,7 @@ namespace drei
         public:
             Bitmap(uint64_t res_x, uint64_t res_y);
             void write(std::string file);
+            void put_pixel(uint64_t pos_x, uint64_t pos_y, drei::Pixel &pixel);
+            void clear(drei::Pixel &pixel);
     };
 }
