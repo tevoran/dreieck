@@ -3,6 +3,6 @@
 
 namespace drei {
 
-    void vec_print(glm::vec3* v, const char* name);
+    void vec_print(glm::vec3* v, const char* = "vec");
 }
 
