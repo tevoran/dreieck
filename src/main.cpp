@@ -19,6 +19,5 @@ int main(int argc, char* argv[])
         std::cout << "dreieck 1920 1080 rendered_image.bmp\n";
         std::cout << "\nonly BMPs are supported\n";
     }
-    std::cout << "super awesome raytracer\n";
     return 0;
 }
