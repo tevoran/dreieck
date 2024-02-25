@@ -35,25 +35,10 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-    drei::Vec3 a = {0.5f, 1.0f, 0.0f};
-    drei::Vec3 b = {1.0f, 0.0f, 0.0f};
-    drei::Vec3 c = drei::vec_line_a_to_b(&a, &b);
+    glm::vec3 a = {0.5f, 1.0f, 0.0f};
+    glm::vec3 b = {1.0f, 0.0f, 0.0f};
     drei::vec_print(&a, "a");
     drei::vec_print(&b, "b");
-    drei::vec_print(&c, "c");
-
-    drei::Vec3 d;
-    d = drei::vec_project_a_onto_b(&a, &b);
-    drei::vec_print(&d, "A in B");
-
-    d = drei::vec_project_a_onto_b(&a, &c);
-    drei::vec_print(&d, "A in C");
-
-    d = drei::vec_project_a_onto_b(&b, &a);
-    drei::vec_print(&d, "B in A");
-
-    d = drei::vec_project_a_onto_b(&b, &c);
-    drei::vec_print(&d, "B in C");
 
     std::cout << "super awesome raytracer\n";
     return 0;
